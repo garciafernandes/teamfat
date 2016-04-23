@@ -15,7 +15,7 @@ use Helpers\Session;
 /**
  * Sample controller showing a construct and 2 methods and their typical usage.
  */
-class Welcome extends Controller
+class Admin extends Controller
 {
     /**
      * Call the parent construct
@@ -29,26 +29,22 @@ class Welcome extends Controller
     /**
      * Define Index page title and load template files
      */
-    public function index()
+    public function indexAdmin()
     {
-        /*$data['title'] = $this->language->get('welcomeText');
-        $data['welcomeMessage'] = $this->language->get('welcomeMessage');*/
-		echo 'Welcome';
+		
         View::renderTemplate('header', $data);
-        View::render('Welcome/Welcome', $data);
+        View::render('Admin/Admin', $data);
         View::renderTemplate('footer', $data);
     }
 
     /**
      * Define Subpage page title and load template files
      */
-    public function subPage()
+    public function recette()
     {
-        $data['title'] = $this->language->get('subpageText');
-        $data['welcomeMessage'] = $this->language->get('subpageMessage');
-
+		echo 'recette';
         View::renderTemplate('header', $data);
-        View::render('Welcome/SubPage', $data);
+        View::render('Admin/Admin', $data);
         View::renderTemplate('footer', $data);
     }
 }

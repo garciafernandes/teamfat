@@ -46,8 +46,10 @@ class User extends Controller {
 		else 
 			$user = $user[0];
 
-                if ($user == false || Password::verify($_POST['password'], $user->password) == false)
-                    $error[] = 'Mauvaises données';
+                if ($user == false || Password::verify($_POST['password'], $user->password) == false) {
+                    echo $user->password." " .Password::verify($_POST['password'], $user->password);
+					$error[] = 'Mauvaises données';
+				}
             } else {
                 // $is_valid holds an array for the errors.
                 $error = $is_valid;

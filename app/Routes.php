@@ -18,7 +18,8 @@ $router = Router::getInstance();
 // Default Routing
 Router::any('', 'App\Controllers\Welcome@index');
 Router::any('subpage', 'App\Controllers\Welcome@subPage');
-
+Router::any('admin', 'App\Controllers\Admin@indexAdmin');
+Router::any('recette', 'App\Controllers\Admin@recette');
 
 //User Routing :
 Router::any('/utilisateur/inscription', 'App\Modules\User\User@register');

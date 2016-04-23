@@ -14,30 +14,21 @@ use Helpers\DB\Entity;
 
 class User extends Entity {
     public $login;     // varchar(255)
-    public $mdp;     // varchar(255)
-    public $mail;     // varchar(45)
-    public $nom;     // varchar(45)
-    public $prenom;     // varchar(45)
-    public $age;     // int
+    public $email;     // varchar(255)
+    public $password;     // varchar(255)
     public $cookie;     // varchar(255)
 
     public function __construct(
         $login = "",
-        $mdp = "",
-        $mail = "",
-        $nom = "",
-        $prenom = "",
-        $age = "",
+        $email = "",
+        $password = "",
         $cookie = "",
     $id = false) {
         parent::__construct($id);
 
         $this->login = $login;
-        $this->mdp = $mdp;
-        $this->mail = $mail;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->age = $age;
+        $this->email = $email;
+        $this->password = $password;
         $this->cookie = $cookie;
     }
 }

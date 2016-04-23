@@ -1,10 +1,7 @@
 user:
   login: varchar(255)
-  mdp: varchar(255)
-  mail: varchar(45)
-  nom: varchar(45)
-  prenom: varchar(45)
-  age: int
+  email: varchar(255)
+  password: varchar(255)
   cookie: varchar(255)
     
 commentaire:

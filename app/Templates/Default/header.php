@@ -17,4 +17,13 @@
 
 <div class="container">
 
-<p><img src='<?=Url::templatePath();?>images/nova.png' alt='<?=SITETITLE;?>'></p>
+<?php
+if(Session::get('id')==null) {
+   echo "<a href='".DIR."utilisateur/inscription'>Inscription </a>";
+   echo "<a href='".DIR."utilisateur/login'> Login</a>";
+} else {
+	echo "Bonjour " . Session::get('login');
+   echo "<a href='".DIR."utilisateur/logout'> Deconnexion </a>";
+	
+
+}

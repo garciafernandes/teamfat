@@ -101,7 +101,7 @@ class Config
         /**
          * Optional create a constant for the name of the site.
          */
-        define('SITETITLE', 'BASIS');
+        define('SITETITLE', '#TEAMFAT');
 
         /**
          * Optional set a site email address.
