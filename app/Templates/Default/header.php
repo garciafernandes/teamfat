@@ -22,8 +22,7 @@ if(Session::get('id')==null) {
    echo "<a href='".DIR."utilisateur/inscription'>Inscription </a>";
    echo "<a href='".DIR."utilisateur/login'> Login</a>";
 } else {
-	echo "Bonjour " . Session::get('login');
-   echo "<a href='".DIR."utilisateur/logout'> Deconnexion </a>";
-	
+	echo "Bonjour <a href='".DIR."admin'> " . Session::get('login').  "</a>"; 
+   echo "<a href='".DIR."utilisateur/logout'>  Deconnexion </a>";
 
 }
